@@ -34,7 +34,12 @@ mkdir new-project
 npm init
 ```
 
-After you've created your own project downloading this driver.
+After you've created your own project, you can either download this driver
+or use npm:
+
+```
+npm i beryldb
+```
 
 ## Connecting to BerylDB
 
