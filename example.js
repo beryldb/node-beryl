@@ -15,6 +15,8 @@
 
 var Link = require("./connection");
 
+/* Sets key 'hello' */
+
 Link.set("hello", "world").then(function(data) 
 {
         console.log(data);
@@ -24,7 +26,9 @@ Link.set("hello", "world").then(function(data)
         console.log("error: " + error.message);
 });
 
-Link.keys("*").then(function(data) 
+/* Will only return 5 entries. */
+
+Link.keys("*", 0, 5).then(function(data) 
 {
         data.forEach(function(item)
         {
@@ -35,6 +39,8 @@ Link.keys("*").then(function(data)
 {
         console.log("error: " + error.message);
 });
+
+/* Obtains key 'hello' */
 
 Link.get("hello").then(function(data) 
 {
