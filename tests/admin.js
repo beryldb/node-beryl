@@ -15,9 +15,9 @@
 
 var Link = require("../connection");
 
-/* Inserts 'item' into list1. */
+/* FlushDB */
 
-Link.lpush("list1", "item").then(function(data) 
+Link.flushdb().then(function(data) 
 {
         console.log(data);
 })
@@ -26,9 +26,20 @@ Link.lpush("list1", "item").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* Returns all items on list 'list1' */
+/* FlushAll */
 
-Link.lget("list1").then(function(data) 
+Link.flushall().then(function(data) 
+{
+        console.log(data);
+})
+.catch(function(error)
+{
+        console.log("error: " + error.message);
+});
+
+/* Returns all modules */
+
+Link.modules().then(function(data) 
 {
         data.forEach(function(item)
         {
@@ -40,9 +51,23 @@ Link.lget("list1").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* Returns last item from a list. */
+/* Returns all coremodules */
 
-Link.lback("list1", "item").then(function(data) 
+Link.coremodules().then(function(data) 
+{
+        data.forEach(function(item)
+        {
+                console.log(item);
+        })
+})
+.catch(function(error)
+{
+        console.log("error: " + error.message);
+});
+
+/* Current working directory */
+
+Link.pwd().then(function(data) 
 {
         console.log(data);
 })
@@ -51,31 +76,10 @@ Link.lback("list1", "item").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* Counts items on list. */
 
-Link.lcount("list1").then(function(data) 
-{
-        console.log(data);
-})
-.catch(function(error)
-{
-        console.log("error: " + error.message);
-});
+/* Load a module */
 
-/* Will delete 'item' from list1. */
-
-Link.ldel("list1", "item").then(function(data) 
-{
-        console.log(data);
-})
-.catch(function(error)
-{
-        console.log("error: " + error.message);
-});
-
-/* Resizes 'list1' to 1. */
-
-Link.lresize("list1", 1).then(function(data) 
+Link.loadmodule("forcejoin").then(function(data) 
 {
         console.log(data);
 })

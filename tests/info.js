@@ -15,9 +15,10 @@
 
 var Link = require("../connection");
 
-/* Inserts 'item' into list1. */
 
-Link.lpush("list1", "item").then(function(data) 
+/* Returns database size */
+
+Link.dbsize().then(function(data) 
 {
         console.log(data);
 })
@@ -26,23 +27,9 @@ Link.lpush("list1", "item").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* Returns all items on list 'list1' */
+/* Returns current select */
 
-Link.lget("list1").then(function(data) 
-{
-        data.forEach(function(item)
-        {
-                console.log(item);
-        })
-})
-.catch(function(error)
-{
-        console.log("error: " + error.message);
-});
-
-/* Returns last item from a list. */
-
-Link.lback("list1", "item").then(function(data) 
+Link.current().then(function(data) 
 {
         console.log(data);
 })
@@ -51,9 +38,9 @@ Link.lback("list1", "item").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* Counts items on list. */
+/* Returns current version */
 
-Link.lcount("list1").then(function(data) 
+Link.version().then(function(data) 
 {
         console.log(data);
 })
@@ -62,20 +49,9 @@ Link.lcount("list1").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* Will delete 'item' from list1. */
+/* Current database */
 
-Link.ldel("list1", "item").then(function(data) 
-{
-        console.log(data);
-})
-.catch(function(error)
-{
-        console.log("error: " + error.message);
-});
-
-/* Resizes 'list1' to 1. */
-
-Link.lresize("list1", 1).then(function(data) 
+Link.db().then(function(data) 
 {
         console.log(data);
 })

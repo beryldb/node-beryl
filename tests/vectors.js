@@ -15,9 +15,9 @@
 
 var Link = require("../connection");
 
-/* Inserts 'item' into list1. */
+/* Inserts 'item' into vector1. */
 
-Link.lpush("list1", "item").then(function(data) 
+Link.vpush("vector1", "item").then(function(data) 
 {
         console.log(data);
 })
@@ -26,9 +26,9 @@ Link.lpush("list1", "item").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* Returns all items on list 'list1' */
+/* Returns all items on vector1 'vector1' */
 
-Link.lget("list1").then(function(data) 
+Link.vget("vector1").then(function(data) 
 {
         data.forEach(function(item)
         {
@@ -40,9 +40,9 @@ Link.lget("list1").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* Returns last item from a list. */
+/* Returns last item from a vector */
 
-Link.lback("list1", "item").then(function(data) 
+Link.vback("vector1").then(function(data) 
 {
         console.log(data);
 })
@@ -51,9 +51,9 @@ Link.lback("list1", "item").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* Counts items on list. */
+/* Returns front item from a vector */
 
-Link.lcount("list1").then(function(data) 
+Link.vfront("vector1").then(function(data) 
 {
         console.log(data);
 })
@@ -62,9 +62,7 @@ Link.lcount("list1").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* Will delete 'item' from list1. */
-
-Link.ldel("list1", "item").then(function(data) 
+Link.vcount("vector1").then(function(data) 
 {
         console.log(data);
 })
@@ -73,9 +71,20 @@ Link.ldel("list1", "item").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* Resizes 'list1' to 1. */
+/* Deletes 'item' from vector1. */
 
-Link.lresize("list1", 1).then(function(data) 
+Link.vdel("vector1", "item").then(function(data) 
+{
+        console.log(data);
+})
+.catch(function(error)
+{
+        console.log("error: " + error.message);
+});
+
+/* Resizes 'vector1' to 1. */
+
+Link.vresize("vector1", 1).then(function(data) 
 {
         console.log(data);
 })
