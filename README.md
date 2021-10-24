@@ -89,7 +89,7 @@ var Link = new Connection({
 If you are familiar with BerylDB, you will soon learn that most functions
 from this driver have the same name as its underlying function. 
 
-Check Beryl's [full list of commands](https://docs.beryl.dev/using/commands/)
+Check Beryl's [full list of commands](https://docs.beryl.dev/commands/)
 
 Let's look at an example exercising all the different available operations:
 

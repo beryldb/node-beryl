@@ -1,6 +1,6 @@
 {
   "name": "beryldb",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "NodeJS official client for BerylDB",
   "main": "connection.js",
   "repository": {
@@ -14,5 +14,6 @@
     "name": "Carlos Ferry",
     "email": "cferry@beryldb.com"
   },
-  "license": "BSD-3"
+  "license": "BSD-3",
+  "homepage": "http://docs.beryl.dev/"
 }
