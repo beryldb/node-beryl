@@ -37,6 +37,17 @@ Link.get("hello").then(function(data)
         console.log("error: " + error.message);
 });
 
+/* Key's length */ 
+
+Link.strlen("hello").then(function(data) 
+{
+        console.log(data);
+})
+.catch(function(error)
+{
+        console.log("error: " + error.message);
+});
+
 /* Deletes hello */
 
 Link.del("hello").then(function(data) 
