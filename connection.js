@@ -13,7 +13,7 @@
 
 "use strict";
 
-var Connection = require("./lib/server").Server;
+var Connection = require("./lib/server");
 
 var Link = new Connection({
                       host  : "127.0.0.1",            
