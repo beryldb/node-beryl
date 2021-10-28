@@ -1,8 +1,8 @@
 {
   "name": "beryldb",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "NodeJS official client for BerylDB",
-  "main": "connection.js",
+  "main": "lib/server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/beryldb/node-beryl.git"
