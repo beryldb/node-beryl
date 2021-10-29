@@ -62,6 +62,19 @@ Link.vfront("vector1").then(function(data)
         console.log("error: " + error.message);
 });
 
+/* Returns pos 0 in vector 1 */
+
+Link.vpos("vector1", 1).then(function(data) 
+{
+        console.log(data);
+})
+.catch(function(error)
+{
+        console.log("error: " + error.message);
+});
+
+/* Counts items in vector1 */
+
 Link.vcount("vector1").then(function(data) 
 {
         console.log(data);
