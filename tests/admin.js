@@ -41,10 +41,12 @@ Link.flushall().then(function(data)
 
 Link.modules().then(function(data) 
 {
-        data.forEach(function(item)
-        {
-                console.log(item);
-        })
+      for (var entry of data.entries()) 
+      {
+           var name  = entry[0];
+           var desc  = entry[1];
+           console.log(name + " => " + desc); 
+      }
 })
 .catch(function(error)
 {
@@ -55,10 +57,26 @@ Link.modules().then(function(data)
 
 Link.coremodules().then(function(data) 
 {
-        data.forEach(function(item)
-        {
-                console.log(item);
-        })
+      for (var entry of data.entries()) 
+      {
+           var name  = entry[0];
+           var desc  = entry[1];
+           console.log(name + " => " + desc); 
+      }
+})
+.catch(function(error)
+{
+        console.log("error: " + error.message);
+});
+
+Link.dblist().then(function(data) 
+{
+      for (var entry of data.entries()) 
+      {
+           var dbname  = entry[0];
+           var dbpath  = entry[1];
+           console.log(dbname + " => " + dbpath); 
+      }
 })
 .catch(function(error)
 {

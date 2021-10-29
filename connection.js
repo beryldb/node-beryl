@@ -23,7 +23,7 @@ var Link = new Connection({
 }).connect({
      connected : function() 
      {
-          console.log("Connected to BerylDB server.");
+          console.log("Connected to BerylDB server: " + Link.host + ":" + Link.port);
      },
 
      disconnected : function() 
