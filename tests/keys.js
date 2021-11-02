@@ -15,6 +15,8 @@
 
 var Link = require("../connection");
 
+Link.flushall();
+
 /* Defines hello with 'world' */
 
 Link.set("hello", "world").then(function(data) 

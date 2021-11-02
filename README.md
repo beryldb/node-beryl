@@ -29,16 +29,16 @@ node-beryl in your project.
 
 First, you need to create your own project:
 
-```
-mkdir new-project
-npm init
+```bash
+$ mkdir new-project
+$ npm init
 ```
 
 After you've created your own project, you can either download this driver
 or use npm:
 
-```
-npm i beryldb
+```bash
+$ npm i beryldb
 ```
 
 ## Connecting to BerylDB

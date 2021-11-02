@@ -15,6 +15,8 @@
 
 var Link = require("../connection");
 
+Link.flushall();
+
 /* Creates map 'a' with hash 'b' and value 'c'. */
 
 Link.hset("a", "b", "c").then(function(data) 

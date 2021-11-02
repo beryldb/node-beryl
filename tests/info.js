@@ -15,6 +15,7 @@
 
 var Link = require("../connection");
 
+Link.flushall();
 
 /* Returns database size */
 

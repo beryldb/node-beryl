@@ -15,6 +15,8 @@
 
 var Link = require("../connection");
 
+Link.flushall();
+
 /* Adds Latitude and Longitude coordinates for Miami */
 
 Link.geoadd("Miami", "25.761681", "-80.191788").then(function(data) 
