@@ -1,5 +1,5 @@
 /*
- * node-beryl - NodeJS Client for BerylDB.
+ * node-beryl - Node.js Driver for BerylDB.
  * http://www.beryldb.com
  *
  * Copyright (C) 2021 - Carlos F. Ferry <cferry@beryldb.com>
@@ -39,7 +39,7 @@ Link.get("hello").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* Key's length */ 
+/* Let's obtain length of key 'hello' */ 
 
 Link.strlen("hello").then(function(data) 
 {

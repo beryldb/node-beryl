@@ -1,14 +1,11 @@
-/*
- * node-beryl - NodeJS Client for BerylDB.
+/* 
+ * node-beryl - Node.js Driver for BerylDB.
  * http://www.beryldb.com
  *
- * Copyright (C) 2021 - Carlos F. Ferry <cferry@beryldb.com>
- * 
- * This file is part of BerylDB. BerylDB is free software: you can
- * redistribute it and/or modify it under the terms of the BSD License
- * version 3.
- *
- * More information about our licensing can be found at https://docs.beryl.dev
+ * This is an example script for node-beryl. You may modify it
+ * and freely use it at your convenience. Feel free to join our
+ * discord support server If you are interested about
+ * BerylDB. 
  */
 
 "use strict";
@@ -26,23 +23,20 @@ Link.set("hello", "world").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* Will only return 5 entries. */
+/* We set a map 'a' with hash 'b' and value 'c'. */
 
-Link.keys("*", 0, 5).then(function(data) 
+Link.hset("a", "b", "c").then(function(data) 
 {
-        data.forEach(function(item)
-        {
-                console.log(item);
-        })
+        console.log(data)
 })
 .catch(function(error)
 {
         console.log("error: " + error.message);
 });
 
-/* Obtains key 'hello' */
+/* We create list 'd' and push item 'f' */
 
-Link.get("hello").then(function(data) 
+Link.lpush("d", "f").then(function(data) 
 {
         console.log(data);
 })

@@ -1,4 +1,6 @@
-![Logo](https://static.beryl.dev/smaller.png)
+<p align="center">
+  <img src="https://static.beryl.dev/smaller.png">
+</p>
 
 # node-beryl, a Node.js driver for BerylDB.
 
@@ -88,9 +90,13 @@ var Link = new Connection({
 If you are familiar with BerylDB, you will soon learn that most functions
 from this driver have the same name as its underlying function. 
 
-Check Beryl's [full list of commands](https://docs.beryl.dev/commands/)
+Check BerylDB's [full list of commands](https://docs.beryl.dev/commands/)
 
-Let's look at an example exercising all the different available operations:
+## Querying
+
+Let's look at an example exercising all the different available operations
+
+We define a key **``hello``** with value **world**
 
 ```javascript
 Link.set("hello", "world").then(function(data) 
@@ -102,6 +108,8 @@ Link.set("hello", "world").then(function(data)
         console.log("error: " + error.code);
 });
 ```
+
+We set a map **``a``** with value **b**
 
 ```javascript
 Link.hset("a", "b", "c").then(function(data) 
@@ -121,7 +129,7 @@ or 'a' are defined):
 OK
 ```
 
-## Querying for multiple data
+## Querying for lists
 
 You can use forEach in order to iterate a result that contains more than one
 item:
