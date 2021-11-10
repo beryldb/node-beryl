@@ -1,6 +1,6 @@
 {
   "name": "beryldb",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "NodeJS official client for BerylDB",
   "main": "lib/server.js",
   "repository": {
