@@ -40,7 +40,7 @@ Link.lget("list1").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* List all lists */
+/* Returns all lists */
 
 Link.lkeys("*").then(function(data) 
 {
@@ -51,9 +51,9 @@ Link.lkeys("*").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* Returns last item from a list. */
+/* Returns last item from a 'list1' */
 
-Link.lback("list1", "item").then(function(data) 
+Link.lback("list1").then(function(data) 
 {
         console.log(data);
 })
