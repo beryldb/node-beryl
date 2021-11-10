@@ -1,7 +1,7 @@
 {
   "name": "beryldb",
-  "version": "0.1.5",
-  "description": "NodeJS official client for BerylDB",
+  "version": "0.1.6",
+  "description": "Node.js driver for BerylDB",
   "main": "lib/server.js",
   "repository": {
     "type": "git",

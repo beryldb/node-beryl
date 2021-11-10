@@ -15,8 +15,6 @@
 
 var Link = require("../connection");
 
-Link.flushall();
-
 /* FlushDB */
 
 Link.flushdb().then(function(data) 

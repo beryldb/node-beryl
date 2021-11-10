@@ -15,6 +15,8 @@
 
 var Link = require("../connection");
 
+Link.flushall();
+
 /* Inserts 'item' into list1. */
 
 Link.lpush("list1", "item").then(function(data) 
@@ -62,20 +64,9 @@ Link.lback("list1").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* Counts items on list. */
+/* Counts items on 'list1' */
 
 Link.lcount("list1").then(function(data) 
-{
-        console.log(data);
-})
-.catch(function(error)
-{
-        console.log("error: " + error.message);
-});
-
-/* Will delete 'item' from list1. */
-
-Link.ldel("list1", "item").then(function(data) 
 {
         console.log(data);
 })
@@ -94,3 +85,15 @@ Link.lresize("list1", 1).then(function(data)
 {
         console.log("error: " + error.message);
 });
+
+/* Deletes item from 'list1' */
+
+Link.ldel("list1", "item").then(function(data) 
+{
+        console.log(data);
+})
+.catch(function(error)
+{
+        console.log("error: " + error.message);
+});
+

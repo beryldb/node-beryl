@@ -15,7 +15,7 @@
 
 var Link = require("../connection");
 
-/* Defines hello with 'world' */
+/* Sets key 'hello' and assigns value world. */
 
 Link.set("hello", "world").then(function(data) 
 {
@@ -26,6 +26,8 @@ Link.set("hello", "world").then(function(data)
         console.log("error: " + error.message);
 });
 
+/* Sets a timeout on key 'hello' */
+
 Link.expire("hello", 300).then(function(data) 
 {
         console.log(data);
@@ -34,6 +36,8 @@ Link.expire("hello", 300).then(function(data)
 {
         console.log("error: " + error.message);
 });
+
+/* Checks if given key expires */
 
 Link.expires("hello").then(function(data) 
 {

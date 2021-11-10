@@ -15,6 +15,8 @@
 
 var Link = require("../connection");
 
+Link.flushall();
+
 /* Inserts 'item' into vector1. */
 
 Link.vpush("vector1", "item").then(function(data) 
@@ -64,7 +66,7 @@ Link.vfront("vector1").then(function(data)
 
 /* Returns pos 0 in vector 1 */
 
-Link.vpos("vector1", 1).then(function(data) 
+Link.vpos("vector1", 0).then(function(data) 
 {
         console.log(data);
 })
@@ -72,6 +74,7 @@ Link.vpos("vector1", 1).then(function(data)
 {
         console.log("error: " + error.message);
 });
+
 
 /* Counts items in vector1 */
 
@@ -87,17 +90,6 @@ Link.vcount("vector1").then(function(data)
 /* Deletes 'item' from vector1. */
 
 Link.vdel("vector1", "item").then(function(data) 
-{
-        console.log(data);
-})
-.catch(function(error)
-{
-        console.log("error: " + error.message);
-});
-
-/* Resizes 'vector1' to 1. */
-
-Link.vresize("vector1", 1).then(function(data) 
 {
         console.log(data);
 })

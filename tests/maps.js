@@ -39,7 +39,7 @@ Link.hget("a", "b").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* We list all items associated with list 'a' */
+/* List all items associated with list 'a' */
 
 Link.hlist("a").then(function(data) 
 {
@@ -53,7 +53,7 @@ Link.hlist("a").then(function(data)
         console.log("error: " + error.message);
 });
 
-/* We remove hash 'b' from map 'a' */
+/* We remove hash b from map 'a' */
 
 Link.hdel("a", "b").then(function(data) 
 {
