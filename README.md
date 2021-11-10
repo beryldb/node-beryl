@@ -1,3 +1,4 @@
+![Logo](https://static.beryl.dev/smaller.png)
 
 # node-beryl, a Node.js driver for BerylDB.
 
@@ -11,8 +12,6 @@
 If you want to learn more about BerylDB and how to install it, feel free to check our
 documentation at [docs.beryl.dev](https://docs.beryl.dev/).<br>
 Follow us on [Twitter](https://twitter.com/beryldb).
-
-![Logo](https://static.beryl.dev/smaller.png)
 
 ## QuickStart
 

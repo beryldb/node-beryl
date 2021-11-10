@@ -50,6 +50,18 @@ Link.strlen("hello").then(function(data)
         console.log("error: " + error.message);
 });
 
+/* List all keys */
+
+Link.keys("*").then(function(data) 
+{
+        console.log(data);
+})
+.catch(function(error)
+{
+        console.log("error: " + error.message);
+});
+
+
 /* Deletes hello */
 
 Link.del("hello").then(function(data) 
